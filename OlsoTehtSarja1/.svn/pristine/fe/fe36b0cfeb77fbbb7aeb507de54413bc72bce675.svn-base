@@ -1,0 +1,28 @@
+import pokerikadet.Kasi;
+import pokerikadet.Pakka;
+
+/**
+*
+* @author Leevi Koskinen 23.8.2021
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    	// Luo pakka
+    	Pakka pakka = new Pakka();
+    	Kasi kasi;
+    	do {
+        	// Sekoita pakka
+        	pakka.sekoita();
+        	// Jaa käsi
+        	Kasi jaettuKasi = new Kasi(pakka);
+        	// Näytä (tulosta) käsi
+            System.out.println(jaettuKasi);
+        	// Tarkasta onko väri
+            kasi = jaettuKasi;
+    	} while(kasi.annaArvo() != 2);
+        System.out.println(kasi.getMaara());
+    }
+}

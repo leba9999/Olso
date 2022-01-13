@@ -1,0 +1,47 @@
+package saikeet;
+import java.util.concurrent.ThreadLocalRandom;
+/**
+ * @author Leevi Koskinen 11.9.2021
+ */
+
+public class KilpajuoksijaP extends Thread {
+	private int numero;
+	private final int MATKA = 400;
+	private double aika;
+	private long lopetusAika;
+	private long aloitusAika;
+
+	private static int seuraavaNumero=1;
+	
+	public KilpajuoksijaP() {
+		numero = seuraavaNumero;
+		seuraavaNumero++;
+	}
+	public static void setSeuraavaNumero(int seuraavaNumero) {
+		KilpajuoksijaP.seuraavaNumero = seuraavaNumero;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+	@Override
+	public void run(){
+		aloitusAika = System.nanoTime();
+		int juostuMatka = 0;
+		double kierrosaika = 0;
+		super.setPriority(Thread.MAX_PRIORITY - numero);
+		do {
+			kierrosaika = ThreadLocalRandom.current().nextDouble(1.075, 1.5);
+			//kierrosaika =(Math.random() * (1.5 - 1.075) + 1.075);
+			aika += kierrosaika;
+			juostuMatka += 10;
+			if(juostuMatka % 50 == 0) {
+			}
+		}while(juostuMatka < MATKA);
+		lopetusAika = System.nanoTime();
+	}
+
+	public double getAika(){
+		return (lopetusAika - aloitusAika);
+	}
+}

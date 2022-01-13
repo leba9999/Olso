@@ -1,0 +1,21 @@
+package pokerikadet;
+/**
+*
+* @author laita tähän nimesi ja päiväys
+*/
+import java.util.Arrays;
+
+public class Kasi {
+	
+    final static int EIVÄRI = 0, EISUORA = 0, SUORA = 1, VÄRI = 2, VÄRISUORA = 3;
+    // Näiden näkyvyys: pakkauksen sisällä (ei private, ei public)
+    // Viittaus muista luokista muodossa Luokka.tunnus esim. Käsi.SUORA
+
+    // Esittele instanssimuuttujat
+
+    // Kirjoita konstruktori, joka saa parametrina Pakka-olion
+
+    // Kirjoita toteutus metodille annaArvo()
+
+    // Kirjoita toString()
+}

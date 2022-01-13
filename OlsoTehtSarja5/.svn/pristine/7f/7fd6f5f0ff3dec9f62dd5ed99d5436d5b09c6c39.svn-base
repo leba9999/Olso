@@ -1,0 +1,34 @@
+package saikeet;
+
+/**
+* @author Leevi Koskinen 11.9.2021
+*/
+
+public class OmaSaie extends Thread {
+	private int luku;
+	private static int yhteisetAjokerrat = 0;
+
+	public OmaSaie() {
+		
+	}
+	public OmaSaie(int luku) {
+		this.luku = luku;
+	}
+	
+	public int getLuku() {
+		return luku;
+	}
+	public void setLuku(int luku) {
+		this.luku = luku;
+	}
+	public static int getYhteisetAjokerrat() {
+		return yhteisetAjokerrat;
+	}
+	public static void setYhteisetAjokerrat(int yhteisetAjokerrat) {
+		OmaSaie.yhteisetAjokerrat = yhteisetAjokerrat;
+	}
+	public void run() {
+		this.luku++;
+		OmaSaie.yhteisetAjokerrat++;
+	}
+}

@@ -1,0 +1,56 @@
+package pokerikadet;
+import java.util.Random;
+/**
+*
+* @author Leevi Koskinen 23.8.2021
+*/
+public class Pakka {
+
+    final static int KORTTILKM = 52;
+	// Näiden näkyvyys: pakkauksen sisällä (ei private, ei public)
+    // Viittaus muista luokista Luokka.tunnus, esim. Pakka.KORTTILKM
+
+    // Esittele instanssimuuttujat
+    private int vuorossa;
+    private Kortti[] pakka;
+    // Kirjoita konstruktori, joka alustaa pakan Kortti-olioilla
+    Pakka(){
+    	this.vuorossa = 0;
+    	this.pakka = new Kortti[53];
+    	int maa = Kortti.HERTTA;
+    	int arvo = 0;
+    	for(int i = 1; i < this.pakka.length; i++) {
+    		arvo++;
+    		this.pakka[i] = new Kortti(maa, arvo);
+    		if(arvo >= 13) {
+    			arvo = 0;
+    			maa++;
+    		}
+    	}
+    }
+    // Kirjoita metodi sekoita()
+    public void sekoita() {
+    	Random rand = new Random();
+    	for(int i = 0; i < 100; i++) {
+    		int randomKortti_1 = rand.nextInt(this.KORTTILKM) + 1;
+    		int randomKortti_2;
+    		// Varmistetaan ettei vahingossa yritetä vaihtaa saman kortin paikkaa.
+    		do {
+        		randomKortti_2 = rand.nextInt(this.KORTTILKM) + 1;
+    		} while(randomKortti_1 == randomKortti_2);
+    		// Vaihetaan kortien paikkaa käyttäen pakan 0 alkiota koska tehtävässä ei sitä käytetä vielä mihinkään
+    		this.pakka[0] = this.pakka[randomKortti_1];
+    		this.pakka[randomKortti_1] = this.pakka[randomKortti_2];
+    		this.pakka[randomKortti_2] = this.pakka[0];
+    	}
+    }
+    // Kirjoita metodi annaKortti()
+    public Kortti annaKortti() {
+    	this.vuorossa++;
+    	if(vuorossa > this.KORTTILKM) {
+    		this.vuorossa = 1;
+    	}
+    	return this.pakka[this.vuorossa];
+    }
+
+}

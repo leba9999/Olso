@@ -1,0 +1,23 @@
+import pokerikadet.Kasi;
+import pokerikadet.Pakka;
+
+/**
+*
+* @author Leevi Koskinen 23.8.2021
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    	// Luo pakka
+
+    	// Sekoita pakka
+
+    	// Jaa käsi
+
+    	// Näytä (tulosta) käsi
+
+    	// Tarkasta onko väri
+    }
+}

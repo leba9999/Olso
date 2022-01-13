@@ -1,0 +1,17 @@
+package kahvila;
+
+/**
+ *
+ * @author Oma Nimesi
+ */
+public class Kahvila {
+
+    // Esittele instanssimuuttuja valikoiman ja tilausten tallettamiseksi (ArrayList)
+
+    // Ohjelmoi yhden parametrin konstruktori
+
+    // Ohjelmoi lisääTilaus()
+
+    // Ohjelmoi toString(), joka palauttaa merkkijonoesityksen KAhvila-oliosta
+
+}

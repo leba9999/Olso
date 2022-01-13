@@ -1,0 +1,16 @@
+package kahvila;
+
+/**
+ *
+ * @author Oma Nimesi
+ */
+public class Tilausrivi {
+
+    // Esittele instanssimuuttujat
+    
+    // Ohjelmoi kolmen parametrin konstruktori 
+         
+    // Ohjelmoi annaSumma()
+	
+    // Ohjelmoi toString(), joka palautta merkkijonoesityksen Tilausrivi-oliosta
+}

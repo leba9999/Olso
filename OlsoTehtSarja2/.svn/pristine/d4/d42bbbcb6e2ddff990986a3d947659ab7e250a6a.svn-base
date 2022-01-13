@@ -1,0 +1,37 @@
+import kahvila.*;
+
+/**
+ *
+ * @author Laita tähän oma nimesi ja päiväys
+ */
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    // Esittele tarvittavat muuttujat.
+
+    // Luo kolme tuotetta.
+
+    // Lisää ne valikoimaan.
+
+    // Tulosta valikoima.
+
+    // Poista siitä yksi tuote.
+
+    // Tulosta muuttunut valikoima.
+
+    // Luo tilaus.
+
+    // Luo kaksi tilausriviä.
+
+    // Lisää tilausrivit tilaukseen.
+
+    // Lisää tilaus kahvilan tilauslistaan.
+
+    // Luo toinenkin tilaus tilausriveineen.
+
+    // Tulosta kaikki kahvilan tilaukset.
+
+    }
+}

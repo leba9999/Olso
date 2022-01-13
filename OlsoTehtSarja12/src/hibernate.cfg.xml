@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<!-- Käyttää MySQL-tietokantaa ja MariaDB-palvelinta  -->
+<hibernate-configuration>
+   <session-factory>
+   <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQL5Dialect
+   </property>
+   <property name="hibernate.connection.driver_class">
+      org.mariadb.jdbc.Driver
+   </property>
+
+   <property name="hibernate.connection.url">
+      jdbc:mariadb://localhost/valuutat
+   </property>
+   <property name="hibernate.connection.username">
+      olso
+   </property>
+   <property name="hibernate.connection.password">
+      olso
+   </property>
+   <property name="hbm2ddl.auto">validate</property>
+   <property name="show_sql">true</property>
+   <mapping class="model.Valuutta"/>
+
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,17 @@
+package kahvila;
+
+/**
+ *
+ * @author Oma Nimesi
+ */
+public class Tilaus {
+
+    // Esittele ArrayList tilausrivien tallettamiseksi
+
+    // Ohjelmoi lisääRiviTilaukseen()
+
+    // Ohjelmoi annaLoppusumma()
+	
+    // Ohjelmoi toString, joka palauttaa merkkijonoesityksen yhdestä Tilaus-oliosta
+
+}

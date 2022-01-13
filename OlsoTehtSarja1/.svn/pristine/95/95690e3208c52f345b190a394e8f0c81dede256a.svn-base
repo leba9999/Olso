@@ -1,0 +1,20 @@
+package pokerikadet;
+/**
+*
+* @author laita tähän nimesi ja päiväys
+*/
+public class Pakka {
+
+    final static int KORTTILKM = 52;
+	// Näiden näkyvyys: pakkauksen sisällä (ei private, ei public)
+    // Viittaus muista luokista Luokka.tunnus, esim. Pakka.KORTTILKM
+
+    // Esittele instanssimuuttujat
+
+    // Kirjoita konstruktori, joka alustaa pakan Kortti-olioilla
+
+    // Kirjoita metodi sekoita()
+
+    // Kirjoita metodi annaKortti()
+
+}

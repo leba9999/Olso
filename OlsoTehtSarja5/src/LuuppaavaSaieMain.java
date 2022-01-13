@@ -1,0 +1,19 @@
+import saikeet.LuuppaavaSaie;
+
+/**
+ * @author Leevi Koskinen 11.9.2021
+ */
+
+public class LuuppaavaSaieMain {
+	public static void main(String[] args) {
+		LuuppaavaSaie saie = new LuuppaavaSaie(10);
+		System.out.println("Kierrosten määrä: " + saie.getKierretytKierrokset());
+		saie.start();
+		try {
+			saie.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Kierrosten määrä: " + saie.getKierretytKierrokset());
+	}
+}

@@ -1,0 +1,55 @@
+package pokerikadet;
+/**
+*
+* @author laita tähän nimesi ja päiväys
+*/
+import java.util.Arrays;
+
+public class Kasi {
+	
+    final static int EIVÄRI = 0, EISUORA = 0, SUORA = 1, VÄRI = 2, VÄRISUORA = 3;
+    // Näiden näkyvyys: pakkauksen sisällä (ei private, ei public)
+    // Viittaus muista luokista muodossa Luokka.tunnus esim. Käsi.SUORA
+    static int MAARA = 0;
+    // Esittele instanssimuuttujat
+    private Kortti[] kasi;
+    
+    // Kirjoita konstruktori, joka saa parametrina Pakka-olion
+    public Kasi(Pakka pakka){
+    	this.kasi = new Kortti[5];
+    	for(int i = 0; i < this.kasi.length; i++) {
+        	this.kasi[i] = pakka.annaKortti();
+    	}
+    	MAARA += 1;
+    }
+    // Kirjoita toteutus metodille annaArvo()
+    public int annaArvo() {
+    	boolean vari = true;
+    	for(int i = 0; i < this.kasi.length; i++) {
+    		if(this.kasi[0].getMaa() != this.kasi[i].getMaa()) {
+    			vari = false;
+    		}
+    	}
+    	if(vari) {
+        	return VÄRI;
+    	}
+    	return EIVÄRI;
+    }
+    // Kirjoita toteutus metodille annaArvo()
+    public int getMaara() {
+    	return MAARA;
+    }
+
+    // Kirjoita toString()
+    @Override
+    public String toString() {
+    	String kortit = "";
+    	for(int i = 0; i < this.kasi.length; i++) {
+    		kortit += this.kasi[i].toString();
+    		if(this.kasi.length - 1 > i) {
+    			kortit += ", ";
+    		}
+    	}
+    	return kortit;
+    }
+}

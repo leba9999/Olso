@@ -1,0 +1,21 @@
+package kahvila;
+
+/**
+ *
+ * @author Oma Nimesi
+ */
+public class Valikoima {
+
+    // Esittele ArrayList tuotteiden tallettamiseksi
+
+    // Ohjelmoi getTuote()
+
+    // Ohjelmoi lisääTuote()
+
+    // Ohjelmoi poistaTuote()
+
+    // Poistettava Tuote-olio pitää etsiä listasta tuotenumerolla,
+    // koska poistojen jälkeen tuotenumero != listan indeksi
+
+    // Ohjelmoi toString(), joka on merkkijonoesitys Valikoima-oliosta (eli kaikista tuotteista)
+}

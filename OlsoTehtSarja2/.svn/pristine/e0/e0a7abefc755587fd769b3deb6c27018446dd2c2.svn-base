@@ -1,0 +1,22 @@
+package kahvila;
+
+/**
+ *
+ * @author Oma Nimesi
+ */
+public class Tuote {
+
+    // Esittele instanssimuuttujat
+
+    // Esittele staattinen muuttuja seuraavan vapaan tuotenumeron ylläpitämiseksi
+
+    // Ohjelmoi staattinen metodi alustaSeuraavaVapaaTuotenumero()
+
+    // Ohjelmoi kahden parametrin konstruktori
+
+    // Ohjelmoi getHinta()
+
+    // Ohjelmoi getTuotenumero()
+
+    // Ohjelmoi toString(), joka palauttaa merkkijonoesityksen Tuote-oliosta.
+}
